@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barfird-Inventory-System\\Barford-Inventory-System.csproj": {}
+    "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barford-Inventory-System\\Barford-Inventory-System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barfird-Inventory-System\\Barford-Inventory-System.csproj": {
+    "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barford-Inventory-System\\Barford-Inventory-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barfird-Inventory-System\\Barford-Inventory-System.csproj",
+        "projectUniqueName": "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barford-Inventory-System\\Barford-Inventory-System.csproj",
         "projectName": "Barford-Inventory-System",
-        "projectPath": "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barfird-Inventory-System\\Barford-Inventory-System.csproj",
+        "projectPath": "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barford-Inventory-System\\Barford-Inventory-System.csproj",
         "packagesPath": "C:\\Users\\Jack Godfrey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barfird-Inventory-System\\obj\\",
+        "outputPath": "C:\\Users\\Jack Godfrey\\Documents\\.GitRepos\\Barford-Inventory-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -11,31 +11,32 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Barford_Inventory_System.Models;
+using Barford_Inventory_System.ViewModels;
 
 namespace Barford_Inventory_System
 {
-	/// <summary>
-	/// Interaction logic for AddItemWindow.xaml
-	/// </summary>
-	public partial class AddItemWindow : Window
+    /// <summary>
+    /// Interaction logic for AddItemWindow.xaml
+    /// </summary>
+    public partial class AddItemWindow : Window
 	{
-		public InventoryItem item;
 		public AddItemWindow()
 		{
+			
 			InitializeComponent();
-			item = new InventoryItem();
-			this.DataContext = item;
+			ItemViewModel viewInventoryModel = new ItemViewModel();
+			this.DataContext = viewInventoryModel;
 		}
 
 		private void Button_Confirm_Click(object sender, RoutedEventArgs e)
 		{
-			string message = item.Name + "\n" + item.Description;
-			MessageBox.Show(message);
+			
 		}
 
 		private void Button_Exit_Click(object sender, RoutedEventArgs e)
 		{
-			this.Close();
+
 		}
 	}
 }

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Barford_Inventory_System"
+        xmlns:views = "clr-namespace:Barford_Inventory_System.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920"
         Background="#181735">
@@ -27,11 +28,15 @@
                     Content="Add Item" 
                     Click="btn_AddItem_Click"/>
             <Button x:Name="btn_RemoveItem" 
+                    Command = "{Binding DeleteCommand}" 
                     Style="{StaticResource BasicButton}"
                     Grid.Column="2" 
-                    Content="Remove Item" 
-                    Click="btn_RemoveItem_Click"/>
+                    Content="Remove Item" />
         </Grid>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="Wheat">
+            <views:ItemView x:Name = "ItemViewControl"/>
+        </StackPanel>
         
         
         

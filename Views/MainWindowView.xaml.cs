@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Barford_Inventory_System.Models;
+using Barford_Inventory_System.ViewModels;
 
 namespace Barford_Inventory_System
 {
@@ -21,15 +23,20 @@ namespace Barford_Inventory_System
 			InitializeComponent();
 		}
 
-		private void btn_RemoveItem_Click(object sender, RoutedEventArgs e)
+		/*
+		private void ItemViewControl_Loaded(object sender, RoutedEventArgs e)
 		{
+			InventoryViewModel itemViewModelObject = new InventoryViewModel();
 
-        }
+			ItemViewControl.DataContext = itemViewModelObject;
+		}
+		*/
 
 		private void btn_AddItem_Click(object sender, RoutedEventArgs e)
 		{
 			AddItemWindow addItemWindow = new AddItemWindow();
 			addItemWindow.ShowDialog();
-        }
-    }
+
+		}
+	}
 }
