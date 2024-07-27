@@ -5,10 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:data = "clr-namespace:Barford_Inventory_System.Models" 
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             xmlns:vml = "clr-namespace:Barford_Inventory_System.VML"
-             vml:ViewModelLocator.AutoHookedUpViewModel = "True"
-             >
+             d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <DataTemplate DataType = "{x:Type data:InventoryItem}">
 

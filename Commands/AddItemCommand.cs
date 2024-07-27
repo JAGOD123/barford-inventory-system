@@ -20,7 +20,7 @@ namespace Barford_Inventory_System.Commands
 		public override void Execute(object? parameter)
 		{
 			InventoryItem item = new InventoryItem("NewName", "A New Description");
-			_inventory.AddItem
+			// _inventory.AddItem
 		}
 	}
 }

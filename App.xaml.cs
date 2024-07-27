@@ -16,8 +16,10 @@ namespace Barford_Inventory_System
 		public App()
 		{
 			_inventory = new Inventory("001");
+			_inventory.LoadItems();
 		}
 
+		
 		protected override void OnStartup(StartupEventArgs e)
 		{
 			MainWindow = new MainWindow()
@@ -27,7 +29,7 @@ namespace Barford_Inventory_System
 			MainWindow.Show();
 			base.OnStartup(e);
 		}
-
+		
 	}
 
 }

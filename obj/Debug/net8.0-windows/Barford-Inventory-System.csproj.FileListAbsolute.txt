@@ -21,7 +21,6 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barfird-Inventory-System\obj\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barfird-Inventory-System\obj\Debug\net8.0-windows\AddItemWindow.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barfird-Inventory-System\obj\Debug\net8.0-windows\App.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barfird-Inventory-System\obj\Debug\net8.0-windows\AddItemWindow.baml
-C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\AddItemView.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\ItemView.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\MainWindowView.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\App.g.cs
@@ -34,7 +33,6 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\bin\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\bin\Debug\net8.0-windows\Barford-Inventory-System.dll
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\bin\Debug\net8.0-windows\Barford-Inventory-System.pdb
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\App.baml
-C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\AddItemView.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\ItemView.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\MainWindowView.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.g.resources
@@ -50,3 +48,5 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\DO NOT USE AddItemWindow.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\DO NOT USE AddItemWindow.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.sourcelink.json
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\CreateNewItemView.g.cs
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\CreateNewItemView.baml
