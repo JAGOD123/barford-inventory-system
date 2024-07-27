@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace Barford_Inventory_System.Models
 {
-	public class InventoryItem : INotifyPropertyChanged
+	public class InventoryItem : ModelBase
     {
 
         private string _name;
@@ -53,17 +53,10 @@ namespace Barford_Inventory_System.Models
 			}
 		}
 
-
-		// public string Condition { get; set; }
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		private void RaisePropertyChanged(string property)
+		public InventoryItem(string Name, string Desc)
 		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(property));
-			}
+			_name = Name;
+			_description = Desc;
 		}
     }
 }

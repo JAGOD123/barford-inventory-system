@@ -18,9 +18,9 @@ namespace Barford_Inventory_System.Views
     /// <summary>
     /// Interaction logic for AddItemView.xaml
     /// </summary>
-    public partial class AddItemView : UserControl
+    public partial class CreateNewItemView : UserControl
     {
-        public AddItemView()
+        public CreateNewItemView()
         {
             InitializeComponent();
         }

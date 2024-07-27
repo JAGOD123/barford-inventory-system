@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Barford_Inventory_System.ViewModels
 {
-    class AddItemViewModel
+    class CreateNewItemViewModel
     {
+
     }
 }

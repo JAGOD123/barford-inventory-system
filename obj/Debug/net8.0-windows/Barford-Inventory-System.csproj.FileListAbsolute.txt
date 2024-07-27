@@ -49,3 +49,4 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\ref\Barford-Inventory-System.dll
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\DO NOT USE AddItemWindow.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\DO NOT USE AddItemWindow.baml
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.sourcelink.json

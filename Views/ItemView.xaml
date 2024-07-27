@@ -31,7 +31,7 @@
             <ListBox ItemsSource = "{Binding InventoryItems}" SelectedItem = "{Binding SelectedItem}"/>
             
             <Button Content = "Delete" 
-            Command = "{Binding DeleteCommand}"
+            Command = "{Binding addItemCommand}"
             HorizontalAlignment = "Left" 
             VerticalAlignment = "Top" 
             Width = "75" />
