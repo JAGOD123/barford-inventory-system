@@ -8,55 +8,17 @@ using System.Windows;
 
 namespace Barford_Inventory_System.Models
 {
-	public class InventoryItem : ModelBase
+	public class Item : ModelBase
     {
-
-        private string _name;
-        private string _description;
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                if (_name != value)
-                {
-                    _name = value;
-                    RaisePropertyChanged("Name");
-                }
-            }
-        }
-		public string Description
+		public string Name { get; }
+		public string Description { get; }
+        
+		public string NameAndDesc { get; }
+		public Item(string name, string desc)
 		{
-			get
-			{
-				return _description;
-			}
-			set
-			{
-				if (_description != value)
-				{
-					_description = value;
-					RaisePropertyChanged("Description");
-					RaisePropertyChanged("NameAndDesc");
-				}
-			}
-		}
-
-		public string NameAndDesc
-		{
-			get
-			{
-				return _name + " " + _description;
-			}
-		}
-
-		public InventoryItem(string Name, string Desc)
-		{
-			_name = Name;
-			_description = Desc;
+			Name = name;
+			Description = desc;
+			NameAndDesc= name +" "+ Description;
 		}
     }
 }

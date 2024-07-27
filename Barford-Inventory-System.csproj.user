@@ -13,7 +13,7 @@
     <Compile Update="Views\DO NOT USE AddItemWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ItemView.xaml.cs">
+    <Compile Update="Views\InventoryOverviewView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -24,7 +24,7 @@
     <Page Update="Views\DO NOT USE AddItemWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\ItemView.xaml">
+    <Page Update="Views\InventoryOverviewView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindowView.xaml">

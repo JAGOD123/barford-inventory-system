@@ -11,9 +11,9 @@ namespace Barford_Inventory_System.ViewModels
     class MainWindowViewModel : ViewModelBase
     {
         public ViewModelBase CurrentViewModel { get; }
-        public MainWindowViewModel(Inventory inventory)
+        public MainWindowViewModel()
         {
-            CurrentViewModel = new ItemViewModel(inventory);
+            CurrentViewModel = new InventoryOverviewViewModel();
         }
 	}
 }

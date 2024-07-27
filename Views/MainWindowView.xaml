@@ -23,18 +23,14 @@
             </Grid.ColumnDefinitions>
 
             <Button Content = "addItem" 
-            Command = "{Binding NavCommand}"
-            CommandParameter = "addItem" 
             Grid.Column = "0" />
 
-            <Button Content = "viewItem" 
-            Command = "{Binding NavCommand}" 
-            CommandParameter = "viewItem" 
+            <Button Content = "viewItem"
             Grid.Column = "2" />
         </Grid>
 
         <Grid x:Name = "MainContent" Grid.Row = "1">
-            <views:ItemView x:Name="ItemViewControl"/>
+            <views:InventoryOverviewView DataContext="{Binding CurrentViewModel}" x:Name="ItemViewControl"/>
         </Grid>
 
     </Grid>

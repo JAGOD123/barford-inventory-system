@@ -24,7 +24,7 @@
               Style="{StaticResource GridItem}">
                 <StackPanel>
                     <TextBlock Style="{StaticResource H2}" Text="Item Name"/>
-                    <TextBox Style="{StaticResource InputTextBoxSmall}" Grid.Row="1" Text="{Binding Name, Mode=TwoWay}"/>
+                    <TextBox Style="{StaticResource InputTextBoxSmall}" Grid.Row="1" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
 
             </Grid>
@@ -35,14 +35,16 @@
                            Text="Item Description"/>
                     <TextBox Style="{StaticResource InputTextBoxSmall}"
                          Grid.Row="1"
-                         Text="{Binding Description, Mode=TwoWay}"/>
+                         Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Style="{StaticResource InputButtonConfirm}"
+                Command = "{Binding SubmitCommand}"
                 Content="Exit"/>
-            <Button Style="{StaticResource InputButtonConfirm}"/>
+            <Button Style="{StaticResource InputButtonConfirm}"
+                Command="{Binding CancelCommand}"/>
         </StackPanel>
 
 
