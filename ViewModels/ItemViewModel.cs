@@ -22,6 +22,18 @@ namespace Barford_Inventory_System.ViewModels
 			DeleteCommand = new MyICommand(OnDelete, CanDelete);
 		}
 		public ObservableCollection<InventoryItem> InventoryItems { get; set; }
+		public InventoryItem SelectedItem
+		{
+			get { return _selectedItem; }
+
+			set
+			{
+				_selectedItem = value;
+				DeleteCommand.RaiseCanExecuteChanged();
+			}
+		}
+
+
 
 
 		public void LoadItems()
@@ -33,24 +45,13 @@ namespace Barford_Inventory_System.ViewModels
 			InventoryItems = inventoryItems;
 		}
 
-		public InventoryItem SelectedItem
-		{
-			get
-			{
-				return _selectedItem;
-			}
-
-			set
-			{
-				_selectedItem = value;
-				DeleteCommand.RaiseCanExecuteChanged();
-			}
-		}
 
 
 		private void OnDelete()
 		{
+
 			InventoryItems.Remove(SelectedItem);
+
 		}
 
 		private bool CanDelete()

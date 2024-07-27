@@ -5,40 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Barford_Inventory_System"
         xmlns:views = "clr-namespace:Barford_Inventory_System.Views"
+        xmlns:viewModels ="clr-namespace:Barford_Inventory_System.ViewModels" 
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920"
         Background="#181735">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60px"/>
-            <RowDefinition/>
+            <RowDefinition Height = "60px" />
+            <RowDefinition Height = "*" />
         </Grid.RowDefinitions>
 
-        <Grid x:Name="g_Header"
-              Background="#0f0f2d">
+        <Grid x:Name = "NavBar">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="240"/>
-                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btn_AddItem" 
-                    Style="{StaticResource BasicButton}"
-                    Grid.Column="1" 
-                    Content="Add Item" 
-                    Click="btn_AddItem_Click"/>
-            <Button x:Name="btn_RemoveItem" 
-                    Command = "{Binding DeleteCommand}" 
-                    Style="{StaticResource BasicButton}"
-                    Grid.Column="2" 
-                    Content="Remove Item" />
+            <Button Content = "addItem" 
+            Command = "{Binding NavCommand}"
+            CommandParameter = "addItem" 
+            Grid.Column = "0" />
+
+            <Button Content = "viewItem" 
+            Command = "{Binding NavCommand}" 
+            CommandParameter = "viewItem" 
+            Grid.Column = "2" />
         </Grid>
 
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="Wheat">
-            <views:ItemView x:Name = "ItemViewControl"/>
-        </StackPanel>
-        
-        
-        
+        <Grid x:Name = "MainContent" Grid.Row = "1">
+            <views:ItemView x:Name="ItemViewControl"/>
+        </Grid>
+
     </Grid>
+
 </Window>

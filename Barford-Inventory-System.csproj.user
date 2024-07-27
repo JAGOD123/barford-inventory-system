@@ -7,7 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddItemWindow.xaml.cs">
+    <Compile Update="Views\AddItemView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DO NOT USE AddItemWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ItemView.xaml.cs">
@@ -15,7 +18,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\AddItemWindow.xaml">
+    <Page Update="Views\AddItemView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DO NOT USE AddItemWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ItemView.xaml">

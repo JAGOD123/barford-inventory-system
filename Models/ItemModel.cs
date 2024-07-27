@@ -8,8 +8,6 @@ using System.Windows;
 
 namespace Barford_Inventory_System.Models
 {
-	public class ItemModel { }
-
 	public class InventoryItem : INotifyPropertyChanged
     {
 
