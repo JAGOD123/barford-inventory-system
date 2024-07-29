@@ -41,10 +41,11 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Style="{StaticResource InputButtonConfirm}"
-                Command = "{Binding SubmitCommand}"
+                Command="{Binding cancelCommand}"
                 Content="Exit"/>
             <Button Style="{StaticResource InputButtonConfirm}"
-                Command="{Binding CancelCommand}"/>
+                Command = "{Binding submitCommand}"
+                Content="Submit"/>
         </StackPanel>
 
 

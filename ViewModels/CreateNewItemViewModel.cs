@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Barford_Inventory_System.Commands;
+using Barford_Inventory_System.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,12 +53,12 @@ namespace Barford_Inventory_System.ViewModels
 			}
 		}
 
-		public ICommand SubmitCommand { get; }
-		public ICommand CancelCommand { get; }
+		public ICommand submitCommand { get; }
+		public ICommand cancelCommand { get; }
 
-        public CreateNewItemViewModel()
+        public CreateNewItemViewModel(Inventory inventory)
         {
-            
+            submitCommand = new MakeNewItemCommand(this, inventory); 
         }
 
 

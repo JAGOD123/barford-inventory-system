@@ -26,9 +26,12 @@ namespace Barford_Inventory_System.Models
 			_inventory.Add(new Item("Name3", "Desc3"));
 		}
 
-		public void AddItem(Item item)
+		public void AddItem(Item item) => _inventory.Add(item);
+
+		public List<Item> GetItems()
 		{
-			_inventory.Append(item);
+			return _inventory;
 		}
+
 	}
 }

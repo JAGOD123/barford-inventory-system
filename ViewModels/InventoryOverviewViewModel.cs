@@ -18,15 +18,15 @@ namespace Barford_Inventory_System.ViewModels
 
 		public IEnumerable<ItemViewModel> InventoryItems => _inventory;
 
-		public ICommand addItemCommand { get; }
 
-		public InventoryOverviewViewModel()
+		public InventoryOverviewViewModel(Inventory inventory)
 		{
 			_inventory = new ObservableCollection<ItemViewModel>();
 
 			_inventory.Add(new ItemViewModel(new Item("Name11", "Desc11")));
 			_inventory.Add(new ItemViewModel(new Item("Name12", "Desc12")));
 			_inventory.Add(new ItemViewModel(new Item("Name13", "Desc13")));
+
 		}
 
 		/*

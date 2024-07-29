@@ -30,7 +30,7 @@
         </Grid>
 
         <Grid x:Name = "MainContent" Grid.Row = "1">
-            <views:InventoryOverviewView DataContext="{Binding CurrentViewModel}" x:Name="ItemViewControl"/>
+            <views:CreateNewItemView DataContext="{Binding CurrentViewModel}" x:Name="ItemViewControl"/>
         </Grid>
 
     </Grid>
