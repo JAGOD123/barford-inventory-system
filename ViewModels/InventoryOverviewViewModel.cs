@@ -1,8 +1,11 @@
 ﻿using Barford_Inventory_System.Commands;
 using Barford_Inventory_System.Models;
+using Barford_Inventory_System.Services;
+using Barford_Inventory_System.Stores;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -14,67 +17,34 @@ namespace Barford_Inventory_System.ViewModels
 {
 	public class InventoryOverviewViewModel : ViewModelBase
 	{
-		private readonly ObservableCollection<ItemViewModel> _inventory;
+		private readonly Storage _store;
+		private readonly ObservableCollection<ItemViewModel> _viewInventoryCollection;
 
-		public IEnumerable<ItemViewModel> InventoryItems => _inventory;
+		public IEnumerable<ItemViewModel> InventoryItems => _viewInventoryCollection;
 
+		public ICommand AddItemCommand { get; }
 
-		public InventoryOverviewViewModel(Inventory inventory)
+		public InventoryOverviewViewModel(Storage inventory, NavigationService createNewItemNavigationService)
 		{
-			_inventory = new ObservableCollection<ItemViewModel>();
+			_store = inventory;
+			_viewInventoryCollection = new ObservableCollection<ItemViewModel>();
 
-			_inventory.Add(new ItemViewModel(new Item("Name11", "Desc11")));
-			_inventory.Add(new ItemViewModel(new Item("Name12", "Desc12")));
-			_inventory.Add(new ItemViewModel(new Item("Name13", "Desc13")));
+			AddItemCommand = new NavigateCommand(createNewItemNavigationService);
 
+			UpdateInventory();
 		}
 
-		/*
-		private Item? _selectedItem;
-		public ObservableCollection<Item> InventoryItems;
-
-
-		public InventoryOverviewViewModel(Inventory inventory)
+		private void UpdateInventory()
 		{
-		addItemCommand = new AddItemCommand(inventory);
-		InventoryItems = new ObservableCollection<Item>(inventory.InventoryItems);
-		MessageBox.Show(InventoryItems[0].Name);
-		}
-		
+			_viewInventoryCollection.Clear();
+            foreach (var item in _store.GetItems())
+            {
+                ItemViewModel inventoryOverviewViewModel = new ItemViewModel(item);
+				_viewInventoryCollection.Add(inventoryOverviewViewModel);
+            }
+        }
 
-
-		
-		public string ID
-		{
-			get
-			{
-				return _ID;
-			}
-			set
-			{
-				if (_ID != value)
-				{
-					_ID = value;
-					RaisePropertyChanged("ID");
-				}
-			}
-		}
-		public List<Item> InventoryItems
-		{
-			get
-			{
-				return _inventory;
-			}
-			set
-			{
-				if (_inventory != value)
-				{
-					_inventory = value;
-					RaisePropertyChanged("Inventory");
-				}
-			}
-		}
-		*/
+	
 
 
 

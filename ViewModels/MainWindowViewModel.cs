@@ -1,4 +1,5 @@
 ﻿using Barford_Inventory_System.Models;
+using Barford_Inventory_System.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,19 @@ namespace Barford_Inventory_System.ViewModels
 {
     class MainWindowViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; }
-        public MainWindowViewModel(Inventory inventory)
-        {
-            CurrentViewModel = new CreateNewItemViewModel(inventory);
-        }
+        private readonly NavigationStore _navigationStore;
+		public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
+
+		public MainWindowViewModel(NavigationStore navigationStore)
+		{
+			_navigationStore = navigationStore;
+
+			_navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+		}
+
+		private void OnCurrentViewModelChanged()
+		{
+			OnPropertyChanged(nameof(CurrentViewModel));
+		}
 	}
 }

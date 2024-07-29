@@ -1,5 +1,7 @@
 ﻿using Barford_Inventory_System.Commands;
 using Barford_Inventory_System.Models;
+using Barford_Inventory_System.Services;
+using Barford_Inventory_System.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Windows.Input;
 
 namespace Barford_Inventory_System.ViewModels
 {
-	class CreateNewItemViewModel : ViewModelBase
+	public class CreateNewItemViewModel : ViewModelBase
 	{
 		private string _name;
 		private string _description;
@@ -53,12 +55,14 @@ namespace Barford_Inventory_System.ViewModels
 			}
 		}
 
-		public ICommand submitCommand { get; }
-		public ICommand cancelCommand { get; }
+		public ICommand SubmitCommand { get; }
+		public ICommand CancelCommand { get; }
 
-        public CreateNewItemViewModel(Inventory inventory)
+        public CreateNewItemViewModel(Storage inventory,
+			NavigationService inventoryOverviewNavigationService)
         {
-            submitCommand = new MakeNewItemCommand(this, inventory); 
+            SubmitCommand = new MakeNewItemCommand(this, inventory, inventoryOverviewNavigationService);
+			CancelCommand = new NavigateCommand(inventoryOverviewNavigationService);
         }
 
 

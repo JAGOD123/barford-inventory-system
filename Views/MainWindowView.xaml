@@ -30,7 +30,15 @@
         </Grid>
 
         <Grid x:Name = "MainContent" Grid.Row = "1">
-            <views:CreateNewItemView DataContext="{Binding CurrentViewModel}" x:Name="ItemViewControl"/>
+            <Grid.Resources>
+                <DataTemplate DataType="{x:Type viewModels:CreateNewItemViewModel}">
+                    <views:CreateNewItemView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:InventoryOverviewViewModel}">
+                    <views:InventoryOverviewView/>
+                </DataTemplate>
+            </Grid.Resources>
+            <ContentControl Content="{Binding CurrentViewModel}"/>
         </Grid>
 
     </Grid>

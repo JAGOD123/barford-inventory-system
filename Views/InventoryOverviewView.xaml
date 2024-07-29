@@ -28,7 +28,7 @@
         <StackPanel>
             <ListBox ItemsSource = "{Binding InventoryItems}"/>
             <Button Content = "Add Item" 
-            Command = "{Binding addItemCommand}"
+            Command = "{Binding AddItemCommand}"
             HorizontalAlignment = "Left" 
             VerticalAlignment = "Top" 
             Width = "75" />

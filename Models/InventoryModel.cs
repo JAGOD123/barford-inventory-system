@@ -8,12 +8,12 @@ using System.Windows.Navigation;
 
 namespace Barford_Inventory_System.Models
 {
-    public class Inventory : ModelBase
+    public class Storage : ModelBase
     {
 		private string _ID;
 		private List<Item> _inventory;
 
-		public Inventory(string id)
+		public Storage(string id)
 		{
 			_ID = id;
 			_inventory = new List<Item>();
