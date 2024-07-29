@@ -1,12 +1,9 @@
-﻿<UserControl x:Class="Barford_Inventory_System.Views.AddItemView"
+﻿<UserControl x:Class="Barford_Inventory_System.Views.CreateNewItemView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Barford_Inventory_System.Views"
-             
-             xmlns:vml = "clr-namespace:Barford_Inventory_System.VML"
-             vml:ViewModelLocator.AutoHookedUpViewModel = "True"
              xmlns:data = "clr-namespace:Barford_Inventory_System.Models" 
              
              mc:Ignorable="d" 
@@ -27,7 +24,7 @@
               Style="{StaticResource GridItem}">
                 <StackPanel>
                     <TextBlock Style="{StaticResource H2}" Text="Item Name"/>
-                    <TextBox Style="{StaticResource InputTextBoxSmall}" Grid.Row="1" Text="{Binding Name, Mode=TwoWay}"/>
+                    <TextBox Style="{StaticResource InputTextBoxSmall}" Grid.Row="1" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
 
             </Grid>
@@ -38,14 +35,17 @@
                            Text="Item Description"/>
                     <TextBox Style="{StaticResource InputTextBoxSmall}"
                          Grid.Row="1"
-                         Text="{Binding Description, Mode=TwoWay}"/>
+                         Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Style="{StaticResource InputButtonConfirm}"
+                Command="{Binding CancelCommand}"
                 Content="Exit"/>
-            <Button Style="{StaticResource InputButtonConfirm}"/>
+            <Button Style="{StaticResource InputButtonConfirm}"
+                Command = "{Binding SubmitCommand}"
+                Content="Submit"/>
         </StackPanel>
 
 

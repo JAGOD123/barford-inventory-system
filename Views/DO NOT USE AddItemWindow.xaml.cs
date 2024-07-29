@@ -25,8 +25,8 @@ namespace Barford_Inventory_System
 		{
 			
 			InitializeComponent();
-			ItemViewModel viewInventoryModel = new ItemViewModel();
-			this.DataContext = viewInventoryModel;
+			//InventoryOverviewViewModel viewInventoryModel = new InventoryOverviewViewModel();
+			//this.DataContext = viewInventoryModel;
 		}
 
 		private void Button_Confirm_Click(object sender, RoutedEventArgs e)
