@@ -11,18 +11,18 @@ using System.Windows;
 
 namespace Barford_Inventory_System.Commands
 {
-    class MakeNewItemCommand : CommandBase
+    class MakeNewItemCommand : AsyncCommandBase
     {
 		private readonly CreateNewItemViewModel _createNewItemViewModel;
-		private readonly Storage _inventory;
+		private readonly Warehouse _warehouse;
 		private readonly NavigationService _inventoryOverviewNavigationService;
 
 		public MakeNewItemCommand(CreateNewItemViewModel createNewItemViewModel,
-			Storage inventory,
+			Warehouse warehouse,
 			NavigationService inventoryOverviewNavigationService)
 		{
 			_createNewItemViewModel = createNewItemViewModel;
-			_inventory = inventory;
+			_warehouse = warehouse;
 			_inventoryOverviewNavigationService = inventoryOverviewNavigationService;
 			_createNewItemViewModel.PropertyChanged += OnViewModelPropertyChanged;
 		}
@@ -34,13 +34,13 @@ namespace Barford_Inventory_System.Commands
 		}
 
 
-		public override void Execute(object? parameter)
+		public override async Task ExecuteAsync(object? parameter)
 		{
 			Item item = new Item(
 				_createNewItemViewModel.Name,
 				_createNewItemViewModel.Description
 				);
-			_inventory.AddItem(item);
+			_warehouse.MakeItem(item);
 			_inventoryOverviewNavigationService.Navigate();
 		}
 		private void OnViewModelPropertyChanged(object? sender, PropertyChangedEventArgs e)

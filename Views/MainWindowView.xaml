@@ -11,10 +11,10 @@
         Background="#181735">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height = "60px" />
+            <!--RowDefinition Height = "60px" /-->
             <RowDefinition Height = "*" />
         </Grid.RowDefinitions>
-
+        <!--
         <Grid x:Name = "NavBar">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width = "*" />
@@ -28,7 +28,7 @@
             <Button Content = "viewItem"
             Grid.Column = "2" />
         </Grid>
-
+        -->
         <Grid x:Name = "MainContent" Grid.Row = "1">
             <Grid.Resources>
                 <DataTemplate DataType="{x:Type viewModels:CreateNewItemViewModel}">

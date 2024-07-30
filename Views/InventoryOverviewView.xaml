@@ -16,9 +16,6 @@
 
                 <TextBlock Text = "{Binding Path = Description}" 
                             Width = "100" Margin = "0 5 3 5"/>
-
-                <TextBlock Text = "{Binding Path = NameAndDesc}" 
-                            Margin = "0 5 3 5"/>
             </StackPanel>
 
         </DataTemplate>
