@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Barford_Inventory_System.Services.InventoryProviders;
+using Barford_Inventory_System.Services.ItemConflictValidators;
+using Barford_Inventory_System.Services.ItemCreators;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -10,27 +13,25 @@ namespace Barford_Inventory_System.Models
 {
     public class Storage : ModelBase
     {
-		private string _ID;
-		private List<Item> _inventory;
+		private readonly IItemProvider _itemProvider;
+		private readonly IItemCreator _itemCreator;
+		private readonly IItemConflictValidator _itemConflictValidator;
 
-		public Storage(string id)
+		public Storage(IItemProvider itemProvider, IItemCreator itemCreator, IItemConflictValidator itemConflictValidator)
 		{
-			_ID = id;
-			_inventory = new List<Item>();
+			_itemProvider = itemProvider;
+			_itemCreator = itemCreator;
+			_itemConflictValidator = itemConflictValidator;
 		}
 
-		public void LoadItems()
+		public async Task AddItem(Item item)
 		{
-			_inventory.Add(new Item("Name1", "Desc1"));
-			_inventory.Add(new Item("Name2", "Desc2"));
-			_inventory.Add(new Item("Name3", "Desc3"));
+			await _itemCreator.CreateItem(item);
 		}
 
-		public void AddItem(Item item) => _inventory.Add(item);
-
-		public List<Item> GetItems()
+		public async Task<IEnumerable<Item>> GetAllItems()
 		{
-			return _inventory;
+			return await _itemProvider.GetAllItems();
 		}
 
 	}

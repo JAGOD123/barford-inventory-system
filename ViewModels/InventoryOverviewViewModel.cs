@@ -43,10 +43,5 @@ namespace Barford_Inventory_System.ViewModels
 				_viewInventoryCollection.Add(inventoryOverviewViewModel);
             }
         }
-
-	
-
-
-
 	}
 }
