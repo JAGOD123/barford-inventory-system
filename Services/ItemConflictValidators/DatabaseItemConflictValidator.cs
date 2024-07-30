@@ -27,7 +27,7 @@ namespace Barford_Inventory_System.Services.ItemConflictValidators
 				//return await context.Items
 				//	.Select(i => ToItem(i))
 				//	.AnyAsync(i => i.Conflicts(item));]
-				return null;
+				return false;
 			}
 		}
 

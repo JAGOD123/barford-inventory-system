@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace Barford_Inventory_System.Commands
 {
-    class MakeNewItemCommand : CommandBase
+    class MakeNewItemCommand : AsyncCommandBase
     {
 		private readonly CreateNewItemViewModel _createNewItemViewModel;
 		private readonly Warehouse _warehouse;
@@ -34,7 +34,7 @@ namespace Barford_Inventory_System.Commands
 		}
 
 
-		public override void Execute(object? parameter)
+		public override async Task ExecuteAsync(object? parameter)
 		{
 			Item item = new Item(
 				_createNewItemViewModel.Name,

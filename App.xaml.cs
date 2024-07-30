@@ -62,7 +62,7 @@ namespace Barford_Inventory_System
 
 		private InventoryOverviewViewModel CreateInventoryOverviewViewModel()
 		{
-			return new InventoryOverviewViewModel(_warehouse, new NavigationService(_navigationStore, CreateCreateNewItemViewModel));
+			return InventoryOverviewViewModel.LoadViewModel(_warehouse, new NavigationService(_navigationStore, CreateCreateNewItemViewModel));
 		}
 	}
 
