@@ -25,10 +25,15 @@
         <StackPanel>
             <ListBox ItemsSource = "{Binding InventoryItems}"/>
             <Button Content = "Add Item" 
-            Command = "{Binding AddItemCommand}"
-            HorizontalAlignment = "Left" 
-            VerticalAlignment = "Top" 
-            Width = "75" />
+                Command = "{Binding AddItemCommand}"
+                HorizontalAlignment = "Left" 
+                VerticalAlignment = "Top" 
+                Width = "75" />
+            <Button Content = "Test Command" 
+                Command = "{Binding TestCommand}"
+                HorizontalAlignment = "Left" 
+                VerticalAlignment = "Top" 
+                Width = "75" />
         </StackPanel>
     </Grid>
 </UserControl>
