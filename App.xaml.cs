@@ -20,7 +20,6 @@ namespace Barford_Inventory_System
 	{
 		private const string CONNECTION_STRING = "Data Source=BIS.db";
 		private readonly Warehouse _warehouse;
-		private readonly Storage _inventory;
 		private readonly NavigationStore _navigationStore;
 		private readonly BISDbContextFactory _bisDbContextFactory;
 
@@ -57,12 +56,20 @@ namespace Barford_Inventory_System
 
 		private CreateNewItemViewModel CreateCreateNewItemViewModel()
 		{
-			return new CreateNewItemViewModel(_warehouse, new NavigationService(_navigationStore, CreateInventoryOverviewViewModel));
+			return new CreateNewItemViewModel(_warehouse,
+				new NavigationService(_navigationStore, CreateInventoryOverviewViewModel));
 		}
 
 		private InventoryOverviewViewModel CreateInventoryOverviewViewModel()
 		{
-			return InventoryOverviewViewModel.LoadViewModel(_warehouse, new NavigationService(_navigationStore, CreateCreateNewItemViewModel));
+			return InventoryOverviewViewModel.LoadViewModel(_warehouse,
+				new NavigationService(_navigationStore, CreateCreateNewItemViewModel),
+				new NavigationService(_navigationStore, CreateTestViewModel));
+		}
+
+		private TestViewModel CreateTestViewModel()
+		{
+			return new TestViewModel(new NavigationService(_navigationStore, CreateInventoryOverviewViewModel));
 		}
 	}
 

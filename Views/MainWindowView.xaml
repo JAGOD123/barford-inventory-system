@@ -37,6 +37,9 @@
                 <DataTemplate DataType="{x:Type viewModels:InventoryOverviewViewModel}">
                     <views:InventoryOverviewView/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:TestViewModel}">
+                    <views:TestView/>
+                </DataTemplate>
             </Grid.Resources>
             <ContentControl Content="{Binding CurrentViewModel}"/>
         </Grid>

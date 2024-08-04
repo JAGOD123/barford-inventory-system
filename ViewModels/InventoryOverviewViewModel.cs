@@ -22,18 +22,20 @@ namespace Barford_Inventory_System.ViewModels
 		public IEnumerable<ItemViewModel> InventoryItems => _viewInventoryCollection;
 
 		public ICommand AddItemCommand { get; }
+		public ICommand TestCommand { get; }
 		public ICommand LoadItemsCommand { get; }
 
-		public InventoryOverviewViewModel(Warehouse warehouse, NavigationService createNewItemNavigationService)
+		public InventoryOverviewViewModel(Warehouse warehouse, NavigationService createNewItemNavigationService, NavigationService testCommandNavigationService)
 		{
 			_viewInventoryCollection = new ObservableCollection<ItemViewModel>();
+			TestCommand = new NavigateCommand(testCommandNavigationService);
 			LoadItemsCommand = new LoadItemsCommand(warehouse, this);
 			AddItemCommand = new NavigateCommand(createNewItemNavigationService);
 		}
 
-		public static InventoryOverviewViewModel LoadViewModel(Warehouse warehouse, NavigationService createNewItemNavigationService)
+		public static InventoryOverviewViewModel LoadViewModel(Warehouse warehouse, NavigationService createNewItemNavigationService, NavigationService testCommandNavigationService)
 		{
-			InventoryOverviewViewModel viewModel = new InventoryOverviewViewModel(warehouse, createNewItemNavigationService);
+			InventoryOverviewViewModel viewModel = new InventoryOverviewViewModel(warehouse, createNewItemNavigationService, testCommandNavigationService);
 
 			viewModel.LoadItemsCommand.Execute(null);
 			return viewModel;
