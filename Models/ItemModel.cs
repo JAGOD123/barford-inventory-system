@@ -10,11 +10,14 @@ namespace Barford_Inventory_System.Models
 {
 	public class Item : ModelBase
     {
+		public int ItemID { get; }
 		public string Name { get; }
 		public string Description { get; }
         
 		public string NameAndDesc { get; }
-		public Item(string name, string desc)
+
+		public Item() { }
+        public Item(string name, string desc)
 		{
 			Name = name;
 			Description = desc;
