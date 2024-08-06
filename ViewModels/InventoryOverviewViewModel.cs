@@ -21,8 +21,6 @@ namespace Barford_Inventory_System.ViewModels
 
 		public IEnumerable<ItemViewModel> InventoryItems => _viewInventoryCollection;
 
-		public CreateNewItemViewModel CreateNewItemViewModel { get; }
-
 		private WarehouseStore _warehouseStore { get; }
 
 		public ICommand AddItemCommand { get; }
@@ -32,8 +30,7 @@ namespace Barford_Inventory_System.ViewModels
 		public InventoryOverviewViewModel(
 			WarehouseStore warehouseStore,
 			NavigationService createNewItemNavigationService,
-			NavigationService testCommandNavigationService,
-			CreateNewItemViewModel createNewItemViewModel)
+			NavigationService testCommandNavigationService)
 		{
 			_warehouseStore = warehouseStore;
 			_viewInventoryCollection = new ObservableCollection<ItemViewModel>();
@@ -42,7 +39,6 @@ namespace Barford_Inventory_System.ViewModels
 			LoadItemsCommand = new LoadItemsCommand(_warehouseStore, this);
 			AddItemCommand = new NavigateCommand(createNewItemNavigationService);
 
-			CreateNewItemViewModel = createNewItemViewModel;
 
 			_warehouseStore.ItemMade += OnItemMade;
 		}
@@ -62,15 +58,13 @@ namespace Barford_Inventory_System.ViewModels
 
 		public static InventoryOverviewViewModel LoadViewModel(
 			WarehouseStore warehouseStore,
-			CreateNewItemViewModel createNewItemViewModel,
 			NavigationService createNewItemNavigationService,
 			NavigationService testCommandNavigationService)
 		{
 			InventoryOverviewViewModel viewModel = new InventoryOverviewViewModel(
 				warehouseStore,
 				createNewItemNavigationService,
-				testCommandNavigationService,
-				createNewItemViewModel);
+				testCommandNavigationService);
 
 			viewModel.LoadItemsCommand.Execute(null);
 			return viewModel;
