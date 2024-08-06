@@ -14,6 +14,7 @@ namespace Barford_Inventory_System.Stores
         { 
             get => _currentViewModel;
             set {
+                _currentViewModel?.Dispose();
                 _currentViewModel = value;
                 OnCurrentViewModelChanged();
             } 

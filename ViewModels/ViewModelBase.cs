@@ -15,5 +15,7 @@ namespace Barford_Inventory_System.ViewModels
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyChanged));
 		}
+
+		public virtual void Dispose () { }
 	}
 }

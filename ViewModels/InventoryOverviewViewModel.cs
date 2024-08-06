@@ -21,21 +21,56 @@ namespace Barford_Inventory_System.ViewModels
 
 		public IEnumerable<ItemViewModel> InventoryItems => _viewInventoryCollection;
 
+		public CreateNewItemViewModel CreateNewItemViewModel { get; }
+
+		private WarehouseStore _warehouseStore { get; }
+
 		public ICommand AddItemCommand { get; }
 		public ICommand TestCommand { get; }
 		public ICommand LoadItemsCommand { get; }
 
-		public InventoryOverviewViewModel(Warehouse warehouse, NavigationService createNewItemNavigationService, NavigationService testCommandNavigationService)
+		public InventoryOverviewViewModel(
+			WarehouseStore warehouseStore,
+			NavigationService createNewItemNavigationService,
+			NavigationService testCommandNavigationService,
+			CreateNewItemViewModel createNewItemViewModel)
 		{
+			_warehouseStore = warehouseStore;
 			_viewInventoryCollection = new ObservableCollection<ItemViewModel>();
+
 			TestCommand = new NavigateCommand(testCommandNavigationService);
-			LoadItemsCommand = new LoadItemsCommand(warehouse, this);
+			LoadItemsCommand = new LoadItemsCommand(_warehouseStore, this);
 			AddItemCommand = new NavigateCommand(createNewItemNavigationService);
+
+			CreateNewItemViewModel = createNewItemViewModel;
+
+			_warehouseStore.ItemMade += OnItemMade;
 		}
 
-		public static InventoryOverviewViewModel LoadViewModel(Warehouse warehouse, NavigationService createNewItemNavigationService, NavigationService testCommandNavigationService)
+		public override void Dispose()
 		{
-			InventoryOverviewViewModel viewModel = new InventoryOverviewViewModel(warehouse, createNewItemNavigationService, testCommandNavigationService);
+			_warehouseStore.ItemMade -= OnItemMade;
+			base.Dispose();
+		}
+
+
+		private void OnItemMade(Item item)
+		{
+			ItemViewModel itemViewModel = new ItemViewModel(item);
+			_viewInventoryCollection.Add(itemViewModel);
+		}
+
+		public static InventoryOverviewViewModel LoadViewModel(
+			WarehouseStore warehouseStore,
+			CreateNewItemViewModel createNewItemViewModel,
+			NavigationService createNewItemNavigationService,
+			NavigationService testCommandNavigationService)
+		{
+			InventoryOverviewViewModel viewModel = new InventoryOverviewViewModel(
+				warehouseStore,
+				createNewItemNavigationService,
+				testCommandNavigationService,
+				createNewItemViewModel);
 
 			viewModel.LoadItemsCommand.Execute(null);
 			return viewModel;

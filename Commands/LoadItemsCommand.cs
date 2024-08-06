@@ -1,4 +1,5 @@
 ﻿using Barford_Inventory_System.Models;
+using Barford_Inventory_System.Stores;
 using Barford_Inventory_System.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -11,19 +12,19 @@ namespace Barford_Inventory_System.Commands
 {
 	public class LoadItemsCommand : AsyncCommandBase
 	{
-		private readonly Warehouse _warehouse;
+		private readonly WarehouseStore _warehouseStore;
 		private readonly InventoryOverviewViewModel _viewModel;
 
-		public LoadItemsCommand(Warehouse warehouse, InventoryOverviewViewModel viewModel)
+		public LoadItemsCommand(WarehouseStore warehouseStore, InventoryOverviewViewModel viewModel)
 		{
-			_warehouse = warehouse;
+			_warehouseStore = warehouseStore;
 			_viewModel = viewModel;
 		}
 
 		public override async Task ExecuteAsync(object parammeter)
 		{
-			IEnumerable<Item> items = await _warehouse.GetAllItems();
-			_viewModel.UpdateInventory(items);
+			await _warehouseStore.Load();
+			_viewModel.UpdateInventory(_warehouseStore.Items);
 		}
 	}
 }

@@ -58,10 +58,10 @@ namespace Barford_Inventory_System.ViewModels
 		public ICommand SubmitCommand { get; }
 		public ICommand CancelCommand { get; }
 
-        public CreateNewItemViewModel(Warehouse warehouse,
+        public CreateNewItemViewModel(WarehouseStore warehouseStore,
 			NavigationService inventoryOverviewNavigationService)
         {
-            SubmitCommand = new MakeNewItemCommand(this, warehouse, inventoryOverviewNavigationService);
+            SubmitCommand = new MakeNewItemCommand(this, warehouseStore, inventoryOverviewNavigationService);
 			CancelCommand = new NavigateCommand(inventoryOverviewNavigationService);
         }
 

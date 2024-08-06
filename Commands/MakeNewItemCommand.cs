@@ -1,5 +1,6 @@
 ﻿using Barford_Inventory_System.Models;
 using Barford_Inventory_System.Services;
+using Barford_Inventory_System.Stores;
 using Barford_Inventory_System.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,15 @@ namespace Barford_Inventory_System.Commands
     class MakeNewItemCommand : AsyncCommandBase
     {
 		private readonly CreateNewItemViewModel _createNewItemViewModel;
-		private readonly Warehouse _warehouse;
+		private readonly WarehouseStore _warehouseStore;
 		private readonly NavigationService _inventoryOverviewNavigationService;
 
 		public MakeNewItemCommand(CreateNewItemViewModel createNewItemViewModel,
-			Warehouse warehouse,
+			WarehouseStore warehouseStore,
 			NavigationService inventoryOverviewNavigationService)
 		{
 			_createNewItemViewModel = createNewItemViewModel;
-			_warehouse = warehouse;
+			_warehouseStore = warehouseStore;
 			_inventoryOverviewNavigationService = inventoryOverviewNavigationService;
 			_createNewItemViewModel.PropertyChanged += OnViewModelPropertyChanged;
 		}
@@ -40,7 +41,7 @@ namespace Barford_Inventory_System.Commands
 				_createNewItemViewModel.Name,
 				_createNewItemViewModel.Description
 				);
-			_warehouse.MakeItem(item);
+			_warehouseStore.MakeItem(item);
 			_inventoryOverviewNavigationService.Navigate();
 		}
 		private void OnViewModelPropertyChanged(object? sender, PropertyChangedEventArgs e)
