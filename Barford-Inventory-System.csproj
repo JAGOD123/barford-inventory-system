@@ -18,4 +18,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Stores\" />
+  </ItemGroup>
+
 </Project>

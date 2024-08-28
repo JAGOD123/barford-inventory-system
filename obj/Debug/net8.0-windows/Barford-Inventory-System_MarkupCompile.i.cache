@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\App.xaml
-5-1164729295
+51409300845
 
-50999268604
+24-488951536
 216-1366992752
-Views\CreateNewItemView.xaml;Views\DO NOT USE AddItemWindow.xaml;Views\InventoryOverviewView.xaml;Views\MainWindowView.xaml;Views\TestView.xaml;
+Views\CreateNewItemView.xaml;Views\InventoryOverviewView.xaml;Views\MainWindowView.xaml;Views\OrdersOverviewView.xaml;Views\TestView.xaml;
 
 False
 

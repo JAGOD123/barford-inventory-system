@@ -4,6 +4,8 @@ using Barford_Inventory_System.Services;
 using Barford_Inventory_System.Services.InventoryProviders;
 using Barford_Inventory_System.Services.ItemConflictValidators;
 using Barford_Inventory_System.Services.ItemCreators;
+using Barford_Inventory_System.Services.OrderCreators;
+using Barford_Inventory_System.Services.OrderProviders;
 using Barford_Inventory_System.Stores;
 using Barford_Inventory_System.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -26,29 +28,19 @@ namespace Barford_Inventory_System
 
 		public App()
 		{
-			_bisDbContextFactory = new BISDbContextFactory(CONNECTION_STRING);
-			IItemProvider itemProvider = new DatabaseItemProvider(_bisDbContextFactory);
-			IItemCreator itemCreator = new DatabaseItemCreator(_bisDbContextFactory);
-			IItemConflictValidator itemConflictValidator = new DatabaseItemConflictValidator(_bisDbContextFactory);
-
-
-
-			Storage storage = new Storage(itemProvider, itemCreator, itemConflictValidator);
-			_warehouse = new Warehouse("001", storage);
-			_warehouseStore = new WarehouseStore(_warehouse);
-			_navigationStore = new NavigationStore();
 		}
 
 		protected override void OnStartup(StartupEventArgs e)
 		{
+			/*
 			using (BISDbContext dbContext = _bisDbContextFactory.CreateDbContext())
 			{
 				dbContext.Database.Migrate();
 
 			}
+			*/
 
-
-			_navigationStore.CurrentViewModel = CreateInventoryOverviewViewModel();
+			//_navigationStore.CurrentViewModel = CreateInventoryOverviewViewModel();
 
 			MainWindow = new MainWindow()
 			{
@@ -59,23 +51,5 @@ namespace Barford_Inventory_System
 		}
 
 
-		private CreateNewItemViewModel CreateMakeNewItemViewModel()
-		{
-			return new CreateNewItemViewModel(_warehouseStore, new NavigationService(_navigationStore, CreateInventoryOverviewViewModel));
-		}
-
-		private InventoryOverviewViewModel CreateInventoryOverviewViewModel()
-		{
-			return InventoryOverviewViewModel.LoadViewModel(
-				_warehouseStore, 
-				new NavigationService(_navigationStore, CreateMakeNewItemViewModel),
-				new NavigationService(_navigationStore, CreateTestViewModel));
-		}
-
-		private TestViewModel CreateTestViewModel()
-		{
-			return new TestViewModel(new NavigationService(_navigationStore, CreateInventoryOverviewViewModel));
-		}
 	}
-
 }

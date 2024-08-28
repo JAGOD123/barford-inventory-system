@@ -10,10 +10,10 @@
     <Compile Update="Views\CreateNewItemView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\DO NOT USE AddItemWindow.xaml.cs">
+    <Compile Update="Views\InventoryOverviewView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\InventoryOverviewView.xaml.cs">
+    <Compile Update="Views\OrdersOverviewView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\TestView.xaml.cs">
@@ -24,13 +24,13 @@
     <Page Update="Views\CreateNewItemView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\DO NOT USE AddItemWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\InventoryOverviewView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OrdersOverviewView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TestView.xaml">

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Barford-Inventory-System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afb007df298f16069c8330cf729b502d1d62f345")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a51e9dedac697c51588a529461c677d61911c369")]
 [assembly: System.Reflection.AssemblyProductAttribute("Barford-Inventory-System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Barford-Inventory-System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
