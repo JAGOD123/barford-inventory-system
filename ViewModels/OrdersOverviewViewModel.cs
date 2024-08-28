@@ -1,10 +1,13 @@
-﻿using Barford_Inventory_System.Models;
+﻿using Barford_Inventory_System.Commands;
+using Barford_Inventory_System.Models;
+using Barford_Inventory_System.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Barford_Inventory_System.ViewModels
 {
@@ -13,13 +16,24 @@ namespace Barford_Inventory_System.ViewModels
 		private readonly ObservableCollection<SingleOrderViewModel> _orders;
 
 		public IEnumerable<SingleOrderViewModel> ViewOrders => _orders;
-		
-		public OrdersOverviewViewModel()
+
+		public ICommand MakeOrderCommand { get; }
+
+
+
+
+
+
+
+		public OrdersOverviewViewModel(NavigationService makeOrderNavService)
 		{
+			MakeOrderCommand = new NavigateCommand(makeOrderNavService);
+
 			List<Item> _exampleItems = new List<Item> { new Item(0, "Tent1", "Desc1", "Good"),
 				new Item(1, "Tent2", "Desc2", "Good"),
 				new Item(2, "Tent3", "Desc3", "Good")
 			};
+
 
 
 			_orders = new ObservableCollection<SingleOrderViewModel>();

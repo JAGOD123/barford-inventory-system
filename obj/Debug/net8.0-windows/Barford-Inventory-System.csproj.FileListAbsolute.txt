@@ -159,3 +159,5 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.pdb
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.genruntimeconfig.cache
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\ref\Barford-Inventory-System.dll
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\NewOrderView.g.cs
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\NewOrderView.baml

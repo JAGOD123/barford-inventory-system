@@ -34,6 +34,9 @@
                 <DataTemplate DataType="{x:Type viewModels:OrdersOverviewViewModel}">
                     <views:OrdersOverviewView/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:NewOrderViewModel}">
+                    <views:NewOrderView/>
+                </DataTemplate>
             </Grid.Resources>
             <ContentControl Content="{Binding CurrentViewModel}"/>
         </Grid>

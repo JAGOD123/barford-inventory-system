@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Barford_Inventory_System.Commands
 {
-	/*
+	
 	public class NavigateCommand : CommandBase
 	{
 		private readonly NavigationService _navigationService;
@@ -23,5 +23,5 @@ namespace Barford_Inventory_System.Commands
 			_navigationService.Navigate();
 		}
 	}
-	*/
+	
 }

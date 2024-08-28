@@ -14,5 +14,10 @@ namespace Barford_Inventory_System.Models
 		 */
 		public List<Order> Orders = new List<Order>();
 		public List<Item> InStroage = new List<Item>();
+
+		internal void AddOrder(Order order)
+		{
+			Orders.Add(order);
+		}
 	}
 }

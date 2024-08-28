@@ -3,36 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Barford_Inventory_System">
     <Application.Resources>
-        <Style x:Key="InputTextBoxSmall" TargetType="TextBox">
-            <Setter Property="FontSize" Value="15" />
-            <Setter Property="FontFamily" Value="Fonts/#Dosis"/>
-            <Setter Property="Margin" Value="0,.5,.5,2"/>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10 5" />
         </Style>
 
-        <Style x:Key="InputTextBoxExpandable" TargetType="TextBox">
-            <Setter Property="FontSize" Value="15" />
-            <Setter Property="FontFamily" Value="Fonts/#Dosis"/>
-            <Setter Property="Margin" Value="0,.5,.5,2"/>
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="2" />
         </Style>
 
-        <Style x:Key="H2" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="22" />
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-            <Setter Property="FontFamily" Value="Fonts/#Dosis"/>
-            <Setter Property="Foreground" Value="white"/>
-        </Style>
-
-        <Style x:Key="BasicButton" TargetType="Button">
-            <Setter Property="Margin" Value=".1"/>
-            <Setter Property="MinWidth" Value="50"/>
-            <Setter Property="FontFamily" Value="Fonts/#Dosis"/>
-            <Setter Property="FontSize" Value="22"/>
-        </Style>
-        
-        <Style x:Key="InputButtonConfirm" TargetType="Button">
-            <Setter Property="Margin" Value="2,.5,.5,2"/>
-            <Setter Property="Content" Value="Confirm"/>
-            <Setter Property="MinWidth" Value="50"/>
+        <Style x:Key="Header" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24" />
         </Style>
 
         <Style x:Key="GridItem" TargetType="Grid">
