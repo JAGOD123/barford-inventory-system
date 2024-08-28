@@ -1,12 +1,5 @@
 ﻿using Barford_Inventory_System.DbContexts;
 using Barford_Inventory_System.Models;
-using Barford_Inventory_System.Services;
-using Barford_Inventory_System.Services.InventoryProviders;
-using Barford_Inventory_System.Services.ItemConflictValidators;
-using Barford_Inventory_System.Services.ItemCreators;
-using Barford_Inventory_System.Services.OrderCreators;
-using Barford_Inventory_System.Services.OrderProviders;
-using Barford_Inventory_System.Stores;
 using Barford_Inventory_System.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
@@ -22,8 +15,6 @@ namespace Barford_Inventory_System
 	{
 		private const string CONNECTION_STRING = "Data Source=BIS.db";
 		private readonly Warehouse _warehouse;
-		private readonly WarehouseStore _warehouseStore;
-		private readonly NavigationStore _navigationStore;
 		private readonly BISDbContextFactory _bisDbContextFactory;
 
 		public App()
@@ -44,7 +35,7 @@ namespace Barford_Inventory_System
 
 			MainWindow = new MainWindow()
 			{
-				DataContext = new MainWindowViewModel(_navigationStore)
+				DataContext = new MainWindowViewModel()
 			};
 			MainWindow.Show();
 			base.OnStartup(e);

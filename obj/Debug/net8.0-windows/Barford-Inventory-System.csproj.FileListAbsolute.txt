@@ -23,9 +23,9 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barfird-Inventory-System\obj\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barfird-Inventory-System\obj\Debug\net8.0-windows\AddItemWindow.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.csproj.AssemblyReference.cache
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\CreateNewItemView.g.cs
-C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\DO NOT USE AddItemWindow.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\InventoryOverviewView.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\MainWindowView.g.cs
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\OrdersOverviewView.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\TestView.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
@@ -143,9 +143,9 @@ C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\bin\Debug\net
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\App.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\CreateNewItemView.baml
-C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\DO NOT USE AddItemWindow.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\InventoryOverviewView.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\MainWindowView.baml
+C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\OrdersOverviewView.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Views\TestView.baml
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.g.resources
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\obj\Debug\net8.0-windows\Barford-Inventory-System.GeneratedMSBuildEditorConfig.editorconfig

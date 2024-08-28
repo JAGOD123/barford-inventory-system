@@ -9,19 +9,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
-        <DataTemplate DataType = "{x:Type viewModels:OrderViewModel}">
+        <DataTemplate DataType = "{x:Type viewModels:SingleOrderViewModel}">
 
             <StackPanel Orientation = "Horizontal">
-                <TextBlock Text = "{Binding Path = Name}" 
+                <TextBlock Text = "{Binding Path = Id}" 
                         Width = "100" Margin = "3 5 3 5"/>
 
-                <TextBlock Text = "{Binding Path = Description}" 
+                <TextBlock Text = "{Binding Path = Owner}" 
                         Width = "100" Margin = "0 5 3 5"/>
+                <TextBlock Text = "{Binding Path = SignedOut}" 
+        Width = "100" Margin = "0 5 3 5"/>
+                <TextBlock Text = "{Binding Path = StartDate}" 
+        Width = "100" Margin = "0 5 3 5"/>
+                <TextBlock Text = "{Binding Path = EndDate}" 
+        Width = "100" Margin = "0 5 3 5"/>
             </StackPanel>
 
         </DataTemplate>
     </UserControl.Resources>
     <Grid>
-            
+        <ListBox ItemsSource = "{Binding ViewOrders}"/>
+        
     </Grid>
 </UserControl>

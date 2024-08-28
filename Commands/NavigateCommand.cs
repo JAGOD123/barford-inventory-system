@@ -1,5 +1,4 @@
 ﻿using Barford_Inventory_System.Services;
-using Barford_Inventory_System.Stores;
 using Barford_Inventory_System.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -9,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Barford_Inventory_System.Commands
 {
+	/*
 	public class NavigateCommand : CommandBase
 	{
 		private readonly NavigationService _navigationService;
@@ -23,4 +23,5 @@ namespace Barford_Inventory_System.Commands
 			_navigationService.Navigate();
 		}
 	}
+	*/
 }

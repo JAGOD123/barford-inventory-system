@@ -1,5 +1,4 @@
-﻿using Barford_Inventory_System.Stores;
-using Barford_Inventory_System.ViewModels;
+﻿using Barford_Inventory_System.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +9,7 @@ namespace Barford_Inventory_System.Services
 {
     public class NavigationService
     {
+		/*
 		private readonly NavigationStore _navigationstore;
 		private readonly Func<ViewModelBase> _createViewModel;
 
@@ -22,5 +22,6 @@ namespace Barford_Inventory_System.Services
         {
 			_navigationstore.CurrentViewModel = _createViewModel();
 		}
+*/
     }
 }

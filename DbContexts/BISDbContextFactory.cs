@@ -10,6 +10,7 @@ namespace Barford_Inventory_System.DbContexts
 {
     public class BISDbContextFactory
     {
+		/*
 		private readonly string _connectionString;
 
 		public BISDbContextFactory(string connectionString)
@@ -22,5 +23,6 @@ namespace Barford_Inventory_System.DbContexts
 			DbContextOptions options = new DbContextOptionsBuilder().UseSqlite(_connectionString).Options;
 			return new BISDbContext(options);
 		}
+		*/
 	}
 }

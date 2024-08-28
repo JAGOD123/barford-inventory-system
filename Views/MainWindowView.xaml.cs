@@ -30,7 +30,7 @@ namespace Barford_Inventory_System
 
 			ItemViewControl.DataContext = itemViewModelObject;
 		}
-		*/
+		
 
 		private void btn_AddItem_Click(object sender, RoutedEventArgs e)
 		{
@@ -38,5 +38,6 @@ namespace Barford_Inventory_System
 			addItemWindow.ShowDialog();
 
 		}
+		*/
 	}
 }

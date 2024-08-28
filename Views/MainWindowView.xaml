@@ -31,14 +31,8 @@
         -->
         <Grid x:Name = "MainContent" Grid.Row = "1">
             <Grid.Resources>
-                <DataTemplate DataType="{x:Type viewModels:CreateNewItemViewModel}">
-                    <views:CreateNewItemView/>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewModels:InventoryOverviewViewModel}">
-                    <views:InventoryOverviewView/>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewModels:TestViewModel}">
-                    <views:TestView/>
+                <DataTemplate DataType="{x:Type viewModels:OrdersOverviewViewModel}">
+                    <views:OrdersOverviewView/>
                 </DataTemplate>
             </Grid.Resources>
             <ContentControl Content="{Binding CurrentViewModel}"/>
