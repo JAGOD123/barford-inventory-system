@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Jack Godfrey\Documents\.GitRepos\Barford-Inventory-System\App.xaml
 6516056601
 
-29895991954
+30-188191016
 216-1366992752
 Views\CreateNewItemView.xaml;Views\InventoryOverviewView.xaml;Views\MainWindowView.xaml;Views\NewOrderView.xaml;Views\OrdersOverviewView.xaml;Views\TestView.xaml;
 
-False
+True
 

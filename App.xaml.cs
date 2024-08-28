@@ -46,7 +46,7 @@ namespace Barford_Inventory_System
 
 		private OrdersOverviewViewModel C_OrdersOverviewViewModel()
 		{
-			return new OrdersOverviewViewModel(new NavigationService(_navStore, C_NewOrderViewModel));
+			return new OrdersOverviewViewModel(_warehouse, new NavigationService(_navStore, C_NewOrderViewModel));
 		}
 
 		private NewOrderViewModel C_NewOrderViewModel()

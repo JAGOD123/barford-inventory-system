@@ -15,9 +15,18 @@ namespace Barford_Inventory_System.Models
 		public List<Order> Orders = new List<Order>();
 		public List<Item> InStroage = new List<Item>();
 
+		public event Action OrdersChanged;
+
+
 		internal void AddOrder(Order order)
 		{
 			Orders.Add(order);
+			OrdersChanged?.Invoke();
+		}
+
+		internal IEnumerable<Order> GetAllOrders()
+		{
+			return Orders;
 		}
 	}
 }
